@@ -7,7 +7,9 @@
   = @task.note
 %p
   %strong Completed:
+  Yes
+%p
+  %strong Completed On:
   = @task.completed
-= link_to 'Edit', edit_task_path(@task)
-|
-= link_to 'Back', tasks_path
+= link_to 'Edit', edit_task_path(@task), class: 'btn btn-primary'
+= link_to 'Back', tasks_path, class: 'btn btn-primary'

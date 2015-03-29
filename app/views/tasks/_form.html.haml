@@ -16,8 +16,12 @@
     %br/
     = f.text_area :note
   .field
-    = f.label :completed
+    = f.label :checkbox
     %br/
+    #cshow
+      = f.check_box(:cb, :value => '0')
+  .field{:hidden => true, :id => 'chide'}
+    = f.label :completed
     = f.date_select :completed
   .actions
     = f.submit

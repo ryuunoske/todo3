@@ -1,20 +1,25 @@
+%p
+  Welcome
+  = current_user.username
+  , to your very own task manager.
+
 %p#notice= notice
 %h1 Listing Tasks
-%table
+%table.table.table-hover.table-bordered
   %thead
     %tr
       %th Title
       %th Note
       %th Completed
-      %th{:colspan => "3"}
+      %th{:colspan => "5"}
   %tbody
     - @tasks.each do |task|
       %tr
         %td= task.title
         %td= task.note
         %td= task.completed
-        %td= link_to 'Show', task
-        %td= link_to 'Edit', edit_task_path(task)
-        %td= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Show', task, class: 'btn btn-primary'
+        %td= link_to 'Edit', edit_task_path(task), class: 'btn btn-success'
+        %td= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
 %br/
-= link_to 'New Task', new_task_path
+= link_to 'New Task', new_task_path, class: 'btn btn-default'
