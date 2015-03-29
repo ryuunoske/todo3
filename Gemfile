@@ -30,6 +30,10 @@ gem 'haml'
 
 gem "erb2haml", :group => :development
 
+gem "bootstrap-sass"
+
+gem "simple_form"
+
 #End My Gems
 
 # Use ActiveModel has_secure_password

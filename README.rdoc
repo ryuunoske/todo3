@@ -1,1 +1,4 @@
-Devise Basic App Startup
+Authentication Working
+Tasks Working
+Can Still Perform Some Improvements
+Not Completely Satisified myself

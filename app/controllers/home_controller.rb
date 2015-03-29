@@ -1,13 +1,10 @@
 class HomeController < ApplicationController
-	before_filter :authenticate_user!,
-	:only => [:index, :new]
+	before_filter :authenticate_user!, :only => [:index, :new]
 
 	def index
-	end
-
-	def new
-	end
-
-	def edit
+		if user_signed_in?
+			redirect_to url_for(:controller => :tasks, 
+			:action => 'index')
+		end
 	end
 end
