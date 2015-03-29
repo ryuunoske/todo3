@@ -9,11 +9,16 @@
     %body
         %p.notice= notice
         %p.alert= alert
+        %p
+            Welcome
+            = current_user.username
+            , to your very own task manager.
+
 
         .row-fluid
             .span10.offset1
                 .hero-unit.text-center
-                    %h1 Tasks Manager
+                    %h1 Task Manager
                     %p Easy Way To manage your daily tasks.
     
     = yield
